@@ -2,7 +2,7 @@ import socket
 
 def start_client():
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    client_socket.connect(('192.168.100.22', 65432))  # Replace '192.168.100.22' with the actual IP address of the server
+    client_socket.connect(('localhost', 65432))  # you can use any ip address you want. Made by vRax
     
     welcome_message = client_socket.recv(1024)
     print(welcome_message.decode('utf-8'))
