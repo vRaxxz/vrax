@@ -8,7 +8,7 @@ def sendall(sock, data):
     sock.sendall(struct.pack('!I', len(data)) + data)
 
 def start_server():
-    host = 'SERVER_IP_ADDRESS'  # Server IP address (your IP)
+    host = 'localhost'  # Server IP address (your IP)
     port = 8000  # Port on which the server is listening
 
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
